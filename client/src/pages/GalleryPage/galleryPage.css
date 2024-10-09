@@ -1,0 +1,13 @@
+.gallery-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-page-wrapper .gallery-title {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 42px;
+  font-family: Spectral;
+}
+
+/*# sourceMappingURL=galleryPage.css.map */

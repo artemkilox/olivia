@@ -1,0 +1,51 @@
+.location-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
+}
+.location-page-wrapper .location-title {
+  width: 100%;
+  text-align: center;
+  font-family: Spectral;
+  font-size: 42px;
+}
+.location-page-wrapper .location-map-img {
+  width: 96%;
+}
+.location-page-wrapper .location-content-wrapper {
+  width: 96%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: #fff;
+  border-radius: 8px;
+}
+.location-page-wrapper .location-content-wrapper .location-content-title {
+  font-family: Spectral;
+  font-size: 42px;
+}
+.location-page-wrapper .location-content-wrapper .non-location-item {
+  font-weight: 600;
+  font-size: 32px;
+}
+.location-page-wrapper .location-content-wrapper .location-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(59, 61, 65, 0.1490196078);
+}
+.location-page-wrapper .location-content-wrapper .location-item .location-item-text .location-item-name {
+  font-weight: 600;
+  font-size: 32px;
+  padding-bottom: 25px;
+}
+.location-page-wrapper .location-content-wrapper .location-item .location-item-time {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=locationPage.css.map */

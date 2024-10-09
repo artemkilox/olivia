@@ -1,0 +1,57 @@
+.location-page-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
+
+  .location-title{
+    width: 100%;
+    text-align: center;
+    font-family: Spectral;
+    font-size: 42px;
+  }
+  .location-map-img{
+    width: 96%;
+  }
+  .location-content-wrapper{
+    width: 96%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: #fff;
+    border-radius: 8px;
+
+    .location-content-title{
+      font-family: Spectral;
+      font-size: 42px;
+    }
+    .non-location-item{
+      font-weight: 600;
+      font-size: 32px;
+    }
+    .location-item{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #3B3D4126;
+
+      .location-item-text{
+        .location-item-name{
+          font-weight: 600;
+          font-size: 32px;
+          padding-bottom: 25px;
+        }
+        .location-item-option{
+
+        }
+      }
+      .location-item-time{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}

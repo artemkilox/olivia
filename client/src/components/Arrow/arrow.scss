@@ -1,0 +1,28 @@
+.arrow-btn{
+  border: 2px solid #3B3D4140;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 164px;
+  width: 164px;
+
+  .arrow{
+    width: 43px;
+    height: 40px;
+  }
+  &:active{
+    background: #EFEFEF;
+  }
+}
+.disabled-arrow-btn{
+  border: 2px solid #3B3D4140;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 164px;
+  width: 164px;
+  background: #EFEFEF;
+}

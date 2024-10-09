@@ -1,0 +1,61 @@
+.instruction-wrapper{
+
+  .instruction-back-btn{
+    margin-left: 50px;
+    padding: 10px 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 100px;
+    border: none;
+
+    .back-img-item{
+
+    }
+    &:active{
+      background: #EFEFEF;
+    }
+  }
+  .instruction-title{
+    width: 100%;
+    text-align: center;
+    font-family: Spectral;
+    font-size: 42px;
+    margin: 50px 0;
+  }
+  .instruction-actions-wrapper{
+    padding: 0 50px;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+
+    .instruction-action{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 100px 60px;
+      background: #fff;
+      border-radius: 8px;
+
+      .instruction-action-title{
+        display: flex;
+        font-weight: 600;
+        font-size: 32px;
+
+        .instruction-action-dot{
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: #CFA859;
+          margin-right: 15px;
+        }
+      }
+      .instruction-action-description{
+        font-size: 24px;
+      }
+    }
+  }
+}

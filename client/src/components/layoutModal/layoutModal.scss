@@ -1,0 +1,38 @@
+.layout-modal{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  flex-direction: column;
+
+  .btn-wrapper{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .layout-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .layout-modal-img{
+      object-fit: contain;
+      height: 80vh;
+    }
+    .layout-info{
+      padding: 10px 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+
+      .layout-dot{
+        width: 12px;
+        height: 12px;
+        background: #CFA859;
+        border-radius: 50%;
+      }
+    }
+  }
+}

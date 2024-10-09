@@ -1,0 +1,35 @@
+.gallery-component{
+  background: #fff;
+  width: 96%;
+  height: 78vh;
+  border-radius: 8px;
+
+  .slider-mask{
+    margin-left: 8vw;
+    height: 78vh;
+    width: 80vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .slider{
+      width: 100%;
+      display: flex;
+      margin-left: 0;
+      transition: .2s;
+
+      .slider-img{
+        width: 100%;
+      }
+    }
+  }
+  .slider-controls{
+    margin-top: 22%;
+    padding: 0 5%;
+    width: 96%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+}

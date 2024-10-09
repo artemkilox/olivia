@@ -1,0 +1,26 @@
+.header-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+
+  .header-logo{
+
+  }
+  .header-nav{
+    gap: 25px;
+    display: flex;
+
+    .header-nav-item{
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: #fff;
+
+      &:active{
+        background: #3B3D4126;
+      }
+    }
+  }
+
+}

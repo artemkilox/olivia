@@ -1,0 +1,20 @@
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .description{
+      font-size: 36px;
+    }
+    .title{
+      line-height: 160px;
+      font-family: "Spectral";
+      font-size: 160px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+.header-wrapper .header-nav {
+  gap: 25px;
+  display: flex;
+}
+.header-wrapper .header-nav .header-nav-item {
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #fff;
+}
+.header-wrapper .header-nav .header-nav-item:active {
+  background: rgba(59, 61, 65, 0.1490196078);
+}
+
+/*# sourceMappingURL=header.css.map */

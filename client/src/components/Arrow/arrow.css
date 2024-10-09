@@ -1,0 +1,30 @@
+.arrow-btn {
+  border: 2px solid rgba(59, 61, 65, 0.2509803922);
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 164px;
+  width: 164px;
+}
+.arrow-btn .arrow {
+  width: 43px;
+  height: 40px;
+}
+.arrow-btn:active {
+  background: #EFEFEF;
+}
+
+.disabled-arrow-btn {
+  border: 2px solid rgba(59, 61, 65, 0.2509803922);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 164px;
+  width: 164px;
+  background: #EFEFEF;
+}
+
+/*# sourceMappingURL=arrow.css.map */

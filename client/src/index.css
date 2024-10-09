@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("./resources/fonts/Raleway.ttf")
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("./resources/fonts/SpectralSC-SemiBold.ttf")
+}
+@font-face {
+    font-family: "Inter-medium";
+    src: url("./resources/fonts/Inter-Medium.otf")
+}
+@font-face {
+    font-family: "Inter-semi-bold";
+    src: url("./resources/fonts/Inter-SemiBold.otf")
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    font-size: 26px;
+    color: #3B3D41;
+}
+
+body{
+    background: #f3f3f3;
+}
