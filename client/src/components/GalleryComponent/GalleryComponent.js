@@ -10,11 +10,19 @@ const GalleryComponent = () => {
 
     useEffect(() => {
         let outputArr = []
-        outputArr.push(images[images.length - 1])
+        const newImg = {
+            id: 0,
+            img: images[images.length - 1].img
+        }
+        const lastImg = {
+            id: images.length + 1,
+            img: images[0].img
+        }
+        outputArr.push(newImg)
         images.map(item => {
             outputArr.push(item)
         })
-        outputArr.push(images[0])
+        outputArr.push(lastImg)
         setImagesArr(outputArr)
     }, [])
 
@@ -51,8 +59,8 @@ const GalleryComponent = () => {
                     }}
                     onTransitionEnd={() => handleTransitionEnd()}
                 >
-                    {imagesArr !== [] && imagesArr.map((image) =>
-                        <img src={image.img} alt="" className="slider-img"/>
+                    {imagesArr.map((image) =>
+                        <img key={image.id} src={image.img} alt="" className="slider-img"/>
                     )}
                 </div>
             </div>
