@@ -13,6 +13,7 @@ import {$host} from "../../http";
 const MapComponent = () => {
     const navigate = useNavigate()
     const [lightMode, setLightMode] = useState(1)
+    const [activeBuilding, setActiveBiulding] = useState(0)
 
     const changeLightMode = (mode) => {
         const info = "light" + mode.toString()
@@ -22,6 +23,7 @@ const MapComponent = () => {
     }
 
     const buildingClick = (number) => {
+        setActiveBiulding(number)
         const info = number.toString()
         $host.post('/', {info})
         console.log("building number " + number)
@@ -33,6 +35,7 @@ const MapComponent = () => {
             <div className="numbers-wrapper">
                 {buildings.map(building =>
                     <Number
+                        active={activeBuilding === building.id}
                         marginTop={building.marginTop}
                         marginLeft={building.marginLeft}
                         key={building.id}

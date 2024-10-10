@@ -1,10 +1,10 @@
 import React from 'react';
 import './number.css'
 
-const Number = ({number, callback, marginTop, marginLeft}) => {
+const Number = ({active, number, callback, marginTop, marginLeft}) => {
     return (
         <button
-            className="number-btn"
+            className={active ? "active-btn" : "number-btn"}
             style={{marginTop: marginTop, marginLeft: marginLeft}}
             onClick={callback && callback}
         >
