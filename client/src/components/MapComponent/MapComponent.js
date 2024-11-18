@@ -12,21 +12,40 @@ import {$host} from "../../http";
 
 const MapComponent = () => {
     const navigate = useNavigate()
-    const [lightMode, setLightMode] = useState(1)
+    const [lightStreet, setLightStreet] = useState(false)
+    const [lightMain, setLightMain] = useState(false)
+    const [lightCorpus, setLightCorpus] = useState(false)
     const [activeBuilding, setActiveBiulding] = useState(0)
 
-    const changeLightMode = (mode) => {
-        const info = "light" + mode.toString()
+    const changeStreetMode = (mode) => {
+        const info = mode.toString() + (lightStreet ? " off" : " on")
         $host.post('/', {info})
         console.log("light mode " + mode)
-        setLightMode(mode)
+        setLightStreet(!lightStreet)
+    }
+
+    const changeMainMode = (mode) => {
+        const info = mode.toString() + (lightMain ? " off" : " on")
+        $host.post('/', {info})
+        console.log("light mode " + mode)
+        setLightMain(!lightMain)
+    }
+
+    const changeCorpusMode = (mode) => {
+        setActiveBiulding(0)
+        const info = mode.toString() + (lightCorpus ? " off" : " on")
+        $host.post('/', {info})
+        console.log("light mode " + mode)
+        setLightCorpus(!lightCorpus)
     }
 
     const buildingClick = (number) => {
-        setActiveBiulding(number)
-        const info = number.toString()
-        $host.post('/', {info})
-        console.log("building number " + number)
+        if(!lightCorpus){
+            setActiveBiulding(number)
+            const info = number.toString()
+            $host.post('/', {info})
+            console.log("building number " + number)
+        }
     }
 
     return (
@@ -65,21 +84,21 @@ const MapComponent = () => {
                     </div>
                     <div className="bot-btn-wrapper">
                         <Button
-                            primary={lightMode === 1}
+                            primary={lightStreet}
                             text="Уличная"
-                            callback={() => changeLightMode(1)}
+                            callback={() => changeStreetMode("Уличная")}
                             big={true}
                         />
+                        {/*<Button*/}
+                        {/*    primary={lightMain}*/}
+                        {/*    text="Общая"*/}
+                        {/*    callback={() => changeMainMode("Общая")}*/}
+                        {/*    big={true}*/}
+                        {/*/>*/}
                         <Button
-                            primary={lightMode === 2}
-                            text="Общая"
-                            callback={() => changeLightMode(2)}
-                            big={true}
-                        />
-                        <Button
-                            primary={lightMode === 3}
+                            primary={lightCorpus}
                             text="Корпуса"
-                            callback={() => changeLightMode(3)}
+                            callback={() => changeCorpusMode("Корпуса")}
                             big={true}
                         />
                     </div>
