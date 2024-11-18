@@ -15,7 +15,7 @@ const MapComponent = () => {
     const [lightStreet, setLightStreet] = useState(false)
     const [lightMain, setLightMain] = useState(false)
     const [lightCorpus, setLightCorpus] = useState(false)
-    const [activeBuilding, setActiveBiulding] = useState(0)
+    const [activeBuilding, setActiveBiulding] = useState(-1)
 
     const changeStreetMode = (mode) => {
         const info = mode.toString() + (lightStreet ? " off" : " on")
@@ -40,12 +40,13 @@ const MapComponent = () => {
     }
 
     const buildingClick = (number) => {
-        if(!lightCorpus){
-            setActiveBiulding(number)
-            const info = number.toString()
-            $host.post('/', {info})
-            console.log("building number " + number)
+        if(activeBuilding === 0){
+            changeCorpusMode("Корпус")
         }
+        setActiveBiulding(number)
+        const info = number.toString()
+        $host.post('/', {info})
+        console.log("building number " + number)
     }
 
     return (
